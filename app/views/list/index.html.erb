@@ -1,0 +1,9 @@
+Welcome to the Outside Lands Scavenger Hunt!
+
+by Campbell Belden
+
+<ul id="task_list">
+	<% @lists.each do |list| %>
+		<li><b>Scavenger Hunt #<%= list.id %>:</b> <a href="/list/<%= list.id %>"><%= list.author %></a></li>
+	<% end %>
+</ul>

@@ -1,0 +1,7 @@
+<h1>Outside Lands Scavenger Hunt by <%= @list.author %></h1>
+
+<% @tasks.each do |task| %>
+	<ul>
+		<li>ID: <a href="/list/<%= @list.id %>/task/<%= task.id%>"><%= task.id %></a>: <%= task.description %>, completed? <%= task.completed %></li>
+	</ul>
+<% end %>
