@@ -1,0 +1,9 @@
+#outside_lands_logo {
+  background: url("outside_lands.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+#by {
+  color: purple;
+  font-size: 1.5em;
+}
