@@ -1,0 +1,9 @@
+Welcome to the Outside Lands Scavenger Hunt!
+
+by Campbell Belden
+
+<ul id="task_list">
+	<% @tasks.each do |task| %>
+		<li><%= task.description %>. Completed? <%= task.completed%></li>
+	<% end %>
+</ul>
