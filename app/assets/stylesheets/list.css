@@ -1,0 +1,18 @@
+html {
+  background-color: black;
+}
+
+.center_this {
+  text-align: center;
+  font-size: 2em;
+  color: white;
+  width: 100%;
+  height: 100px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#login :hover {
+  cursor: pointer;
+}
+
+
