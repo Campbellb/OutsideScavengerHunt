@@ -11,12 +11,21 @@
   <br>
   <p>by Campbell Belden</p>
   </br>
-  <p id="login"><%= image_tag("fblogin.png", height: "50", width: "200") %></p>
+  <p id="login"><fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button></p>
   <br>
 </div>
 
-<ul id="task_list">
-	<% @lists.each do |list| %>
-		<li><b>Scavenger Hunt #<%= list.id %>:</b> <a href="/list/<%= list.id %>"><%= list.author %></a></li>
-	<% end %>
-</ul>
+  <div id="status">
+  </div>
+  <ul id="task_list">
+  	<% @lists.each do |list| %>
+  		<li><b>Scavenger Hunt #<%= list.id %>:</b> <a href="/list/<%= list.id %>"><%= list.author %></a></li>
+  	<% end %>
+  </ul>
+  <div class="footer">
+    <script>
+    FB.logout(function(response) {
+    });
+    </script>
+  </div>

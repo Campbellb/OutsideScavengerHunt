@@ -15,4 +15,6 @@ html {
   cursor: pointer;
 }
 
-
+.footer {
+  background-color: red;
+}
