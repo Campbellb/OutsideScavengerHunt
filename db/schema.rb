@@ -11,11 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150712005505) do
+ActiveRecord::Schema.define(version: 20150712064328) do
+
+  create_table "answers", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "lists", force: :cascade do |t|
+    t.string   "author"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "tasks", force: :cascade do |t|
     t.string   "description"
     t.boolean  "completed",   default: false
+    t.integer  "list_id"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
   end

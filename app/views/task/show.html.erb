@@ -1,1 +1,8 @@
-<%= @task.description %>. Completed? <%= @task.completed%>
+Task #<%= @task.id %>.
+
+Belongs to Scavenger Hunt #<%= @list.id %> by <%= @list.author %>.
+
+<br>
+<%= @task.description %>, completed? <%= @task.completed %>
+
+maybe add edit and deletion of response
