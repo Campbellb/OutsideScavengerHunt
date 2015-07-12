@@ -1,7 +1,10 @@
-<h1>Outside Lands Scavenger Hunt by <%= @list.author %></h1>
-
+<h1>Outside Lands Scavenger Hunt by<br><br> <%= @list.author %></h1><br>
+<% @hashtag = @list.author.delete(" ") + "ScavengerHunt" %>
+<a href="https://instagram.com/explore/tags/<%=@hashtag%>"><h3><%= image_tag("instagram-logo-transparent-png-i91.png", height: "150") %>  Click To See what other people submitted for this Scavenger Hunt!</h3></a>
+<h1>Artist Clues:</h1><br><br>
 <% @tasks.each do |task| %>
 	<ul>
-		<li>ID: <a href="/list/<%= @list.id %>/task/<%= task.id%>"><%= task.id %></a>: <%= task.description %></li><input type="submit" value="Complete!" class="complete" id="<%= task.id %>">
+		<li><h2><%= task.description %></h2></li>
+		Upload your submission to Instagram and be sure to include the hashtag: <b>#<%= @hashtag %></b>!
 	</ul>
 <% end %>

@@ -14,11 +14,11 @@
 ActiveRecord::Schema.define(version: 20150712092703) do
 
   create_table "answers", force: :cascade do |t|
-    t.string   "complete"
+    t.boolean  "complete",   default: true
     t.integer  "user_id"
     t.integer  "task_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
   create_table "lists", force: :cascade do |t|

@@ -15,5 +15,14 @@
 //= require turbolinks
 //= require_tree .
 $(document).ready(function(){
-
+	$('.complete').on("click", function(e){
+		e.preventDefault();
+   	$.ajax({
+	      type: "POST",
+	      url: "/answer",
+	      data: { task_id: $(this).attr('id') }
+    }).done(function(data){
+    	console.log("hey");
+    });
+  });
 });

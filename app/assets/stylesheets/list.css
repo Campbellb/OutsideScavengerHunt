@@ -1,5 +1,7 @@
 html {
-  background-color: black;
+  background-image: url("osl-yellow-diamonds-bg.png");
+  background-repeat: repeat;
+	font-family: OSLfont, sans-serif; }
 }
 
 .center_this {

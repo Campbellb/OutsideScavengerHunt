@@ -1,23 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Outside Lands Scavenger Hunt 2015</title>
+  <title>Outside Lands Scavenger Hunt 2015</title> 
+    <meta charset="utf-8">
+    <title>Mobile First Responsive Navigation</title>
+    <meta name="description" content="CSS only mobile first navigation">
+    <meta name="author" content="Ian Yates">
+ 
+    <!--Mobile specific meta goodness :)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+ 
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="img/favicon.ico">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 </head>
 <body>
+	<header>
+         
+    <h1 class="logo"><a href="/">SF Outside Lands Artist Scavenger Hunts</a></h1>
+    <br>
+    <a class="to_nav" href="#primary_nav">Menu</a>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+</header>
+
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
-<%- if user_signed_in? %>
-  <li><%= link_to t('auth.sign_out'), destroy_user_session_path, method: 'delete' %></li>
-<% else %>
-  <li><%= link_to t('auth.sign_in'), new_user_session_path %></li>
-  <li><%= link_to t('auth.sign_up'), new_user_registration_path %></li>
-<% end %>
 
 <%= yield %>
 
+<nav id="primary_nav">
+         
+    <ul>
+     
+        <li><a href="/">Scavenger Hunts</a></li>
+     
+       <li><a href="/rules">Rules</a></li>
+
+        <li><a href="/prizes">Prizes</a></li>
+     
+        <li><a href="/about">About This App</a></li>
+
+        <li><a href="/legal">Legal</a></li>
+               
+        <%- if user_signed_in? %>
+  				<li><%= link_to t('auth.sign_out'), destroy_user_session_path, method: 'delete' %></li>
+				<% else %>
+				  <li><%= link_to t('auth.sign_in'), new_user_session_path %></li>
+				  <li><%= link_to t('auth.sign_up'), new_user_registration_path %></li>
+				<% end %>
+				<li><a href="#home">Top</a></li>
+    </ul>
+ 
+</nav><!--end primary_nav-->
 </body>
 </html>

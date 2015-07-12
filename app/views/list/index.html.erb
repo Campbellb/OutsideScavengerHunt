@@ -1,23 +1,13 @@
-<h1 id="intro">Welcome to the Outside Lands Scavenger Hunt</h1>
-<br><br>
-
 <div>
-  <%= image_tag("outside_lands.jpg", height: "500", width: "100%") %>
-</div>
-
-<br><br>
-
-<div class="center_this">
-  <p class="center_this"><strong>Scavenger Hunt</strong></p>
-  <br>
-  <p>by Campbell Belden</p>
-  </br>
-  <p id="login"><%= image_tag("fblogin.png", height: "50", width: "200") %></p>
-  <br>
+  <%= image_tag("osl.png", height: "500", width: "100%") %>
 </div>
 
 <ul id="task_list">
-  <% @lists.each do |list| %>
-    <li><b>Scavenger Hunt #<%= list.id %>:</b> <a href="/list/<%= list.id %>"><%= list.author %></a></li>
-  <% end %>
+  <h1>Outside Lands Artist Scavenger Hunts!</h1>
+  <p>Here at Outside Lands, we've personally reached out to the artists you love, and asked them to create custom 'scavenger hunts.' Let our artists guide you around the Outside Lands festival grounds, visiting landmarks, talking to people, taking photographs. Who knows what you'll be asked to do!
+  <a href="/list/2"><img src="http://i.imgur.com/bC0e7Fz.jpg"></a>
+  <a href="/list/3"><img src="http://i.imgur.com/5I3wcwL.jpg"></a>
+  <a href="/list/4"><img src="http://i.imgur.com/jAlXvbi.jpg"></a>  
+  <a href="/list/1"><img src="http://i.imgur.com/eEhK80X.jpg"></a>
 </ul>
+
