@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-	def create
-		# logic for creating user here
+	def new
+		@user = User.new
 	end
 end

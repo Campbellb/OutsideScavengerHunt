@@ -2,6 +2,6 @@
 
 <% @tasks.each do |task| %>
 	<ul>
-		<li>ID: <a href="/list/<%= @list.id %>/task/<%= task.id%>"><%= task.id %></a>: <%= task.description %>, completed? <%= task.completed %></li>
+		<li>ID: <a href="/list/<%= @list.id %>/task/<%= task.id%>"><%= task.id %></a>: <%= task.description %></li><input type="submit" value="Complete!" class="complete" id="<%= task.id %>">
 	</ul>
 <% end %>

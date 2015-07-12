@@ -7,6 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<%- if user_signed_in? %>
+  <li><%= link_to t('auth.sign_out'), destroy_user_session_path, method: 'delete' %></li>
+<% else %>
+  <li><%= link_to t('auth.sign_in'), new_user_session_path %></li>
+  <li><%= link_to t('auth.sign_up'), new_user_registration_path %></li>
+<% end %>
 
 <%= yield %>
 
