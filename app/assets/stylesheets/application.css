@@ -215,3 +215,20 @@ footer {
     text-align: center;
     font-size: 14px;
 }
+.center {
+    text-align: center;
+}
+.texture{
+  background-image: url(osl-blue-crosshatch-bg.png);
+  background-repeat:repeat;
+  border-radius: 25px;
+  padding: 20px; 
+  border: 2px solid black;
+}
+.texture2{
+  background-image: url(osl-biege-with-hills.png);
+  background-repeat:repeat;
+  border-radius: 25px;
+  padding: 20px; 
+  border: 2px solid black;
+}

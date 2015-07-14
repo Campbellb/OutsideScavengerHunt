@@ -1,10 +1,15 @@
-<h1>Outside Lands Scavenger Hunt by<br><br> <%= @list.author %></h1><br>
+<div class="texture2"><h1 class="center">Outside Lands Scavenger Hunt by<br><br><%= @list.author %>!</h1><br>
 <% @hashtag = @list.author.delete(" ") + "ScavengerHunt" %>
-<a href="https://instagram.com/explore/tags/<%=@hashtag%>"><h3><%= image_tag("instagram-logo-transparent-png-i91.png", height: "150") %>  Click To See what other people submitted for this Scavenger Hunt!</h3></a>
-<h1>Artist Clues:</h1><br><br>
+<h1>Message From <%= @list.author %>:</h1><br>
+<h2 class="center"> “I specially chose these clues to showcase a few special places around the grounds of my favorite San Francisco festival!”</h2></div>
+<div class="center"><br><br><h1><a href="https://docs.google.com/document/d/13RjC958h8e3-B7CdyU9mM33HEu8EHFbwf_VJmEKA-R8/edit?usp=sharing">Download this as a printable document for use offline!</a></h1>
+<br><br><h1>Artist Clues:</h1><br><br><%= image_tag "osl-arrow-divider.png" %>
+</div>
 <% @tasks.each do |task| %>
 	<ul>
-		<li><h2><%= task.description %></h2></li>
-		Upload your submission to Instagram and be sure to include the hashtag: <b>#<%= @hashtag %></b>!
+		<div class="texture"><h2><%= task.description %></h2>
+		Upload your submission to Instagram and be sure to include the hashtag: <b>#<%= @hashtag %></b>!</div>
 	</ul>
 <% end %>
+
+<a href="https://instagram.com/explore/tags/<%=@hashtag%>"><h2><%= image_tag("instagram-logo-transparent-png-i91.png", height: "75") %>  Click To See what other people submitted for this Scavenger Hunt!</h2></a>
